@@ -14,6 +14,7 @@ a {
 header {
   height: 35px;
   width: 100%;
+  min-width: 1240px;
   background-color: #f5f5f5;
   color: #999999;
   font-size: 14px; }
@@ -57,7 +58,7 @@ nav {
       font-size: 17px;
       color: #333333;
       float: left;
-      height: 45px;
+      height: 120px;
       line-height: 45px;
       vertical-align: middle; }
       nav ul li:hover {
@@ -70,14 +71,141 @@ nav {
     margin-left: 25px;
     border: 2px solid #67ac38;
     float: left; }
-    nav .nav-sousuo-bg .nav-sousuo-left {
+    nav .nav-sousuo-bg input {
+      float: left;
+      outline: none;
+      border: 0; }
+    nav .nav-sousuo-bg input[type='text'] {
       width: 210px;
       height: 40px;
       line-height: 20px;
       vertical-align: middle;
       font-size: 14px;
-      float: left;
-      outline: none;
-      border: 0; }
+      background: url("../img/t0139a3cf9218887d3d.png");
+      background-position: 170px 9px;
+      background-repeat: no-repeat; }
+    nav .nav-sousuo-bg input[type='button'] {
+      width: 100px;
+      height: 40px;
+      background-color: #23ac38;
+      line-height: 20px;
+      vertical-align: middle;
+      font-size: 14px;
+      text-align: center;
+      color: white; }
+      nav .nav-sousuo-bg input[type='button']:hover {
+        background: #67ac38; }
+
+section[id='nav-tankuang'] {
+  width: 100%;
+  min-width: 1240px;
+  height: 378px;
+  z-index: 100;
+  border-top: 1px solid #e5e5e5;
+  position: absolute;
+  display: none;
+  -moz-box-shadow: 0 3px 3px #e5e5e5;
+  /* old Firefox */
+  box-shadow: 0 3px 3px #e5e5e5;
+  -webkit-box-shadow: 0 3px 3px #e5e5e5;
+  background: #fff; }
+  section[id='nav-tankuang'] .m-part {
+    width: 1240px;
+    height: 378px;
+    margin: 0 auto; }
+    section[id='nav-tankuang'] .m-part .l-part {
+      width: 240px;
+      height: inherit;
+      float: left; }
+      section[id='nav-tankuang'] .m-part .l-part:first-child {
+        margin-left: 40px; }
+      section[id='nav-tankuang'] .m-part .l-part p {
+        margin: 20px 0;
+        font-size: 17px; }
+      section[id='nav-tankuang'] .m-part .l-part li {
+        font-size: 14px;
+        margin-top: 15px; }
+        section[id='nav-tankuang'] .m-part .l-part li img {
+          vertical-align: middle;
+          width: 40px;
+          height: 40px; }
+        section[id='nav-tankuang'] .m-part .l-part li a:hover {
+          color: #23ac38;
+          cursor: pointer; }
+      section[id='nav-tankuang'] .m-part .l-part .text-part {
+        width: 90px;
+        height: 30px;
+        line-height: 30px;
+        float: left;
+        font-size: 14px; }
+        section[id='nav-tankuang'] .m-part .l-part .text-part a:hover {
+          color: #23ac38;
+          cursor: pointer; }
+      section[id='nav-tankuang'] .m-part .l-part .text-part2 {
+        width: 240px;
+        height: 30px;
+        line-height: 30px;
+        float: left;
+        font-size: 14px; }
+        section[id='nav-tankuang'] .m-part .l-part .text-part2 a:hover {
+          color: #23ac38;
+          cursor: pointer; }
+
+#diannaoruanjian {
+  display: none; }
+
+#shoujiruanjian {
+  display: none; }
+
+#gerenfuwu {
+  display: none; }
+
+#shangcheng {
+  display: none; }
+
+#anquanlipei {
+  display: none; }
+
+#qiyefuwu {
+  display: none; }
+
+#youxi {
+  display: none; }
+
+section[id="sousuo-tishi"] {
+  width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  height: 260px;
+  z-index: 100;
+  display: none; }
+  section[id="sousuo-tishi"] .tishi-block {
+    width: 310px;
+    height: 260px;
+    border: 2px solid #67ac38;
+    border-top: none;
+    position: absolute;
+    left: 926px;
+    top: -41px; }
+    section[id="sousuo-tishi"] .tishi-block .tishi-text {
+      width: 310px;
+      height: 25px;
+      line-height: 25px;
+      font-size: 14px;
+      vertical-align: middle; }
+      section[id="sousuo-tishi"] .tishi-block .tishi-text .tishi-num {
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+        font-size: 12px;
+        background-color: #b9b9b9;
+        color: #FFFFFF;
+        float: left;
+        margin: 5px 10px;
+        text-align: center; }
+      section[id="sousuo-tishi"] .tishi-block .tishi-text:hover {
+        background-color: #efefef; }
+      section[id="sousuo-tishi"] .tishi-block .tishi-text:nth-child(-n+3) .tishi-num {
+        background-color: #FE6C0F; }
 
 /*# sourceMappingURL=style.css.map */
