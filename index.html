@@ -483,6 +483,7 @@
 		</script>
 		
 		<section id="sousuo-tishi">
+		<div class="tishi-bg">
 			<div class="tishi-block">
 				<div class="tishi-text">
 					<div class="tishi-num">1</div>
@@ -525,20 +526,82 @@
 					3名中国人在菲遭绑架
 				</div>
 			</div>
+		</div>
 		</section>
 		
 		<script type="text/javascript">
-			$(function(){
-				$("#sousuokuang").toggle(
-					function(){
-						$("#sousuo-tishi").css("display","block");
-					},
-					function(){
-						$("#sousuo-tishi").css("display","none");
-					}
-				)
-			});
+			var num1=0;
+			document.getElementById("sousuokuang").onclick=function(){
+				++num1;
+				if(num1%2==1){
+					document.getElementById("sousuo-tishi").style.display="block";
+				}
+				else
+					document.getElementById("sousuo-tishi").style.display="none";
+			}
+			document.getElementById("sousuokuang").onblur=function(){
+				document.getElementById("sousuo-tishi").style.display="none";
+				if(num1%2==1)
+				num1++;
+			}
 		</script>
 		
+		<section id="banner-news-bg">
+			<div class="banner-news-left">
+				<div class="banner-news-left-pic">
+					<ul>
+						<li><img src="img/t0109e97e5dcb526f99.jpg"/></li>
+						<li><img src="img/t01a93e23c2eaf7b961.jpg"/></li>
+						<li><img src="img/t01a82833d71793f77d.jpg"/></li>
+						<li><img src="img/t01d7cd899ed24ee09f.jpg"/></li>
+					</ul>
+					<ul id="u-lis">
+						<li class="on"></li>
+						<li class="off"></li>
+						<li class="off"></li>
+						<li class="off"></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<script type="text/javascript">
+    	window.onload = function(){
+     
+        var images = document.querySelectorAll(".banner-news-left-pic ul li img");
+        var pos = 0;
+        var len = images.length;
+        function show(){
+        	var pos1,pos2;
+        	pos1=pos;pos2=pos;
+        	if(pos1==0)pos1=len-1;
+        	else pos1=pos1-1;
+        	images[pos1].style.display = 'none';
+         	for (i=0;i < 4; i++) {
+         			if(i==pos)
+					document.querySelectorAll("#u-lis li")[i].className = "on";
+					else
+					document.querySelectorAll("#u-lis li")[i].className= "off";
+				}
+         	if(++pos2==len){
+            	images[pos].style.display = 'inline';
+            	pos=0;
+            }
+            else images[pos++].style.display = 'inline';
+         	return pos;
+        }
+         timer = setInterval(show,2000);
+         for(j=0;j<4;j++){
+        (function(j){
+            document.querySelectorAll("#u-lis li")[j].onclick=function(){
+            	clearInterval(timer);           	
+            	pos=j;
+            timer=setInterval(show,2000);
+            }
+        })(j); 
+        }
+        
+    };
+	</script>
 	</body>
 </html>

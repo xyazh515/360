@@ -189,12 +189,17 @@ section[id='nav-tankuang']{
 #qiyefuwu{display: none;}
 #youxi{display: none;}
 section[id="sousuo-tishi"]{
-    width: 1240px;
+    width: 100%;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
     height: 260px;
-    z-index: 100;
+    z-index: 101;
     display: none;
+    .tishi-bg{
+        width: 1240px;
+        margin: 0 auto;
+        position: relative;
+        height: 260px;
     .tishi-block{
         width: 310px;
         height: 260px;
@@ -203,6 +208,7 @@ section[id="sousuo-tishi"]{
         position: absolute;
         left: 926px;
         top: -41px;
+        background-color: #FFFFFF;
         .tishi-text{
             width: 310px;
             height: 25px;
@@ -228,4 +234,55 @@ section[id="sousuo-tishi"]{
                 }
         }
     }
+    }
 }
+section[id='banner-news-bg']{
+    width: 1240px;
+    height: 560px;
+    margin: 0 auto;
+    position: relative;
+    .banner-news-left{
+        width: 842px;
+        height: 560px;
+        border: 1px solid #E5E5E5;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        .banner-news-left-pic{
+            width: 9999px;
+            height: 400px;
+            position: absolute;
+            float: left;
+            li{
+                float:left; 
+                img{
+                    &:not(:first-child){
+                        display: none;
+                    }
+                }
+            }
+        }
+        #u-lis {
+            position: absolute;
+            z-index: 10;
+            bottom: 20px;
+            left: 340px;
+            li {
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+                background: #888888;
+                margin-left: 15px;
+                float: left;
+                &:first-child{
+                    background-color: #23AC38;
+                }
+                &:hover{
+                    background-color: #23AC38 !important;
+                }
+            }
+        }
+    }
+}
+.on {background: #23AC38!important;}
+.off {background: #888888!important;}
